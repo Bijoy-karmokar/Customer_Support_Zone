@@ -3,8 +3,9 @@ import { FaPlus } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-      <div className="navbar-start">
+    <div className="bg-base-100 shadow-sm">
+      <div className="navbar w-11/12 mx-auto">
+         <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -80,6 +81,7 @@ const Navbar = () => {
           <span className="absolute inset-0 w-full h-full transition duration-200 ease-out rounded bg-gradient-to-br to-purple-600 from-blue-500"></span>
           <span className="relative flex items-center gap-2"><FaPlus></FaPlus> New Ticket</span>
         </button>
+      </div>
       </div>
     </div>
   );

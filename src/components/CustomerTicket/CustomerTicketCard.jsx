@@ -1,7 +1,7 @@
 import React from 'react';
 import { CiCalendarDate } from 'react-icons/ci';
 
-const CustomerTicketCard = ({ticket,handleProgress}) => {
+const CustomerTicketCard = ({ticket,handleProgress,taskAdd}) => {
     // console.log(ticket);
     const {id,title,description,customer,priority,status,createdAt} = ticket;
     
