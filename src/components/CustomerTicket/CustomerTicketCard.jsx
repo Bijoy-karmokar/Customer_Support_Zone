@@ -2,7 +2,6 @@ import React from 'react';
 import { CiCalendarDate } from 'react-icons/ci';
 
 const CustomerTicketCard = ({ticket,handleProgress}) => {
-    // console.log(ticket);
     const {id,title,description,customer,priority,status,createdAt} = ticket;
     
     return (
@@ -10,7 +9,7 @@ const CustomerTicketCard = ({ticket,handleProgress}) => {
             <div className='flex items-center justify-between'>
                 <h3 className='text-xl font-medium'>{title}</h3>
                  <p className='badge badge-success'>
-                      <svg class="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" stroke-linejoin="miter" stroke-linecap="butt"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></circle><polyline points="7 13 10 16 17 8" fill="none" stroke="" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"></polyline></g></svg>
+                      <svg className="size-[1em]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="currentColor" strokeLinejoin="miter" strokeLinecap="butt"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeLinecap="square" strokeMiterlimit="10" strokeWidth="2"></circle><polyline points="7 13 10 16 17 8" fill="none" stroke="" strokeLinecap="square" strokeMiterlimit="10" strokeWidth="2"></polyline></g></svg>
                     {status}
                     </p>
             </div>
