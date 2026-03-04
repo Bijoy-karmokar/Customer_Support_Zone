@@ -23,19 +23,23 @@ function App() {
   const handleProgress=(ticket)=>{
     setProgress((prev)=>prev + 1);
     setTaskAdd([...taskAdd,ticket])
-    
+  }
+
+  const handleResolved =()=>{
+    setResolved((prev)=>prev + 1);
+    setProgress((prev)=> prev - 1);
   }
 
   return (
     <>
       <Navbar></Navbar>
-      <Banner progress={progress}></Banner>
+      <Banner progress={progress} resolved={resolved}></Banner>
       <div className='grid grid-cols-1 md:grid-cols-12 gap-5 w-11/12 mx-auto my-10'>
       <div className="col-span-9">
         <CustomerTickets handleProgress={handleProgress} ticketsPromise={ticketsPromise}></CustomerTickets>
       </div> 
       <div className="col-span-3">
-        <TaskStatus taskAdd={taskAdd}></TaskStatus>
+        <TaskStatus handleResolved={handleResolved} taskAdd={taskAdd}></TaskStatus>
       </div>
       </div>
       <Footer></Footer>
