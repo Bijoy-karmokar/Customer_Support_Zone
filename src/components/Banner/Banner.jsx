@@ -2,7 +2,7 @@ import React from "react";
 import vector1 from "../../assets/vector1.png";
 import vector2 from "../../assets/vector2.png";
 
-const Banner = () => (
+const Banner = ({progress}) => (
   <div className="w-11/12 mx-auto my-10">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -23,7 +23,7 @@ const Banner = () => (
           style={{ width: "auto", maxWidth: "45%" }} />
         <div className="relative z-10 text-center">
           <h2 className="text-lg md:text-2xl font-medium mb-3">In-Progress</h2>
-          <p className="text-5xl font-bold">0</p>
+          <p className="text-5xl font-bold">{progress}</p>
         </div>
       </div>
 

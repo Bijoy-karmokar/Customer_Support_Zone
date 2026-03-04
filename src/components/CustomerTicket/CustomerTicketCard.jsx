@@ -1,12 +1,12 @@
 import React from 'react';
 import { CiCalendarDate } from 'react-icons/ci';
 
-const CustomerTicketCard = ({ticket}) => {
+const CustomerTicketCard = ({ticket,handleProgress}) => {
     // console.log(ticket);
     const {id,title,description,customer,priority,status,createdAt} = ticket;
     
     return (
-        <div className='shadow-lg p-4 rounded-lg space-y-2 mt-6'>
+        <div onClick={()=>handleProgress(ticket)} className='shadow-lg p-4 rounded-lg space-y-2 mt-6'>
             <div className='flex items-center justify-between'>
                 <h3 className='text-xl font-medium'>{title}</h3>
                  <p className='badge badge-success'>
