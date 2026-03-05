@@ -5,7 +5,9 @@ const CustomerTicketCard = ({ticket,handleProgress}) => {
     const {id,title,description,customer,priority,status,createdAt} = ticket;
     
     return (
-        <div onClick={()=>handleProgress(ticket)} className='shadow-lg p-4 rounded-lg space-y-2 mt-6 cursor-pointer'>
+        <div onClick={()=>{
+            handleProgress(ticket)
+        }} className='shadow-lg p-4 rounded-lg space-y-2 mt-6 cursor-pointer'>
             <div className='flex items-center justify-between'>
                 <h3 className='text-xl font-medium'>{title}</h3>
                  <p className='badge badge-success'>

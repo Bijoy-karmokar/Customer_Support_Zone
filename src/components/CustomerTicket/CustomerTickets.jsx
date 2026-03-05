@@ -1,18 +1,19 @@
-import React, { use } from 'react';
+import React from 'react';
 import CustomerTicketCard from './CustomerTicketCard';
 
 
 
-const CustomerTickets = ({ticketsPromise,handleProgress,taskAdd}) => {
-    const tickets = use(ticketsPromise);
+const CustomerTickets = ({tickets,handleProgress,taskAdd}) => {
+   
     // console.log(tickets);
+
     
     return (
         <div>
             <h2 className='text-4xl font-semibold'>Customer Tickets</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                 {
-                  tickets.map(ticket=><CustomerTicketCard taskAdd={taskAdd} handleProgress={handleProgress} key={ticket.id} ticket={ticket}></CustomerTicketCard>)
+                  tickets.map(ticket=><CustomerTicketCard  taskAdd={taskAdd} handleProgress={handleProgress} key={ticket.id} ticket={ticket}></CustomerTicketCard>)
                 }
             </div>
         </div>
